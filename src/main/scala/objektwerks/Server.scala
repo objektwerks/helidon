@@ -12,7 +12,7 @@ object Server extends LazyLogging:
   @main def runServer(): Unit =
     val config = Config.create()
     val host = config.get("server.host").asString().get()
-    val port = config.get("server.host").asInt().get()
+    val port = config.get("server.port").asInt().get()
     logger.info(s"*** Server config: $host:$port")
 
     val routing = HttpRouting
@@ -26,7 +26,7 @@ object Server extends LazyLogging:
       .routing(routing)
       .build()
 
-    logger.info(s"*** Server running @ localhost:${server.port}")
+    logger.info(s"*** Server running @ $host:$port")
 
     sys.addShutdownHook {
       logger.info(s"*** Server stopping @ localhost:${server.port}")
