@@ -11,10 +11,11 @@ import java.time.Instant
 object Server extends LazyLogging:
   @main def runServer(): Unit =
     val config = Config.create()
+    logger.info(s"*** Server config: ${config.get("server")}")
 
     val routing = HttpRouting
       .builder()
-      .post("/now", (request, response) => response.send(Instant.now.toString))
+      .get("/now", (request, response) => response.send(Instant.now.toString))
 
     val server = WebServer
       .builder()
