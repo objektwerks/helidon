@@ -9,7 +9,7 @@ import io.helidon.webserver.http.HttpRouting
 import java.time.Instant
 
 object Server extends LazyLogging:
-  @main def main(): Unit =
+  @main def runServer(): Unit =
     val config = Config.create()
 
     val routing = HttpRouting
