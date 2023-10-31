@@ -21,4 +21,9 @@ object Server extends LazyLogging:
     .routing(routing)
     .build()
 
-  logger.info(s"Server running @ 127.0.0.1:${server.port}")
+  logger.info(s"*** Server running @ localhost:${server.port}")
+
+  sys.addShutdownHook {
+    logger.info(s"*** Server stopping @ localhost:${server.port}")
+    server.stop()
+  }
