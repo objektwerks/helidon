@@ -28,3 +28,5 @@ object Server extends LazyLogging:
       logger.info(s"*** Server stopping @ localhost:${server.port}")
       server.stop()
     }
+
+    Thread.currentThread().join()
