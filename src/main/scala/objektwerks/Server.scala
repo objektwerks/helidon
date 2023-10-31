@@ -13,7 +13,7 @@ object Server extends LazyLogging:
 
   val routing = HttpRouting
     .builder()
-    .post("/now", (request, response) => { response.send(Instant.now.toString) } )
+    .post("/now", (request, response) => response.send(Instant.now.toString))
 
   val server = WebServer
     .builder()
