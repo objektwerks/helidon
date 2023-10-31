@@ -14,11 +14,11 @@ object Client extends LazyLogging:
       .baseUri(baseUrl)
       .build()
 
-    logger.info(s"*** Client targeting: $baseUrl")
-
     val response = client
       .get()
       .path(endpoint)
       .request()
     val now = response.entity()
+
+    logger.info(s"*** Client targeting: $baseUrl$endpoint")
     logger.info(s"*** Server response: ${now.toString}")
