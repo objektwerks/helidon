@@ -2,14 +2,19 @@ Helidon
 -------
 >Helidon feature tests using Scala 3.
 
-Server
-------
->See Server.
+Run
+---
 1. sbt clean compile run
+```
+Multiple main classes detected. Select one to run:
+ [1] objektwerks.runClient
+ [2] objektwerks.runServer
 
-Client
-------
->See Client.
+Enter number:
+```
+
+Curl
+----
 1. curl -v http://localhost:7979/now
 
 Reference
