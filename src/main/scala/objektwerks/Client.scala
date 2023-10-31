@@ -6,6 +6,7 @@ import io.helidon.webclient.api.WebClient
 
 object Client extends LazyLogging:
   val baseUrl = "http://localhost:7979"
+  val endpoint = "/now"
 
   val client = WebClient
     .builder()
@@ -13,3 +14,10 @@ object Client extends LazyLogging:
     .build()
 
   logger.info(s"*** Client targeting: $baseUrl")
+
+  val response = client
+    .get()
+    .path(endpoint)
+    .request()
+  val now = response.entity()
+  logger.info(s"*** Server response: ${now.toString}")
