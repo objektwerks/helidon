@@ -5,11 +5,11 @@ import com.typesafe.scalalogging.LazyLogging
 import io.helidon.webclient.api.WebClient
 
 object Client extends LazyLogging:
-  val url = "http://localhost:7979/now"
+  val baseUrl = "http://localhost:7979"
 
   val client = WebClient
     .builder()
-    .baseUri(url)
+    .baseUri(baseUrl)
     .build()
 
-  logger.info(s"*** Client targeting: $url")
+  logger.info(s"*** Client targeting: $baseUrl")
