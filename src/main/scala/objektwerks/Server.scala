@@ -29,7 +29,7 @@ object Server extends LazyLogging:
     logger.info(s"*** Server running @ $host:$port")
 
     sys.addShutdownHook {
-      logger.info(s"*** Server stopping @ localhost:${server.port}")
+      logger.info(s"*** Server stopping @ $host:$port")
       server.stop()
     }
 
