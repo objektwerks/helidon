@@ -9,21 +9,22 @@ import io.helidon.webserver.http.HttpRouting
 import java.time.Instant
 
 object Server extends LazyLogging:
-  val config = Config.create()
+  @main def main(): Unit =
+    val config = Config.create()
 
-  val routing = HttpRouting
-    .builder()
-    .post("/now", (request, response) => response.send(Instant.now.toString))
+    val routing = HttpRouting
+      .builder()
+      .post("/now", (request, response) => response.send(Instant.now.toString))
 
-  val server = WebServer
-    .builder()
-    .config(config.get("server"))
-    .routing(routing)
-    .build()
+    val server = WebServer
+      .builder()
+      .config(config.get("server"))
+      .routing(routing)
+      .build()
 
-  logger.info(s"*** Server running @ localhost:${server.port}")
+    logger.info(s"*** Server running @ localhost:${server.port}")
 
-  sys.addShutdownHook {
-    logger.info(s"*** Server stopping @ localhost:${server.port}")
-    server.stop()
-  }
+    sys.addShutdownHook {
+      logger.info(s"*** Server stopping @ localhost:${server.port}")
+      server.stop()
+    }
