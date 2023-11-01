@@ -13,6 +13,8 @@ object Client extends LazyLogging:
       .builder
       .baseUri(baseUrl)
       .build
+    
+    logger.info(s"*** Client targeting: $baseUrl$endpoint")
 
     val response = client
       .get
@@ -20,5 +22,4 @@ object Client extends LazyLogging:
       .request
     val now = response.entity
 
-    logger.info(s"*** Client targeting: $baseUrl$endpoint")
     logger.info(s"*** Server response: ${now.toString}")
