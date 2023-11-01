@@ -13,7 +13,7 @@ object Server extends LazyLogging:
     val config = Config.create()
     val host = config.get("server.host").asString().get()
     val port = config.get("server.port").asInt().get()
-    logger.info(s"*** Server host: $host port: $port")
+    logger.info(s"*** Config host: $host port: $port")
 
     val routing = HttpRouting
       .builder()
