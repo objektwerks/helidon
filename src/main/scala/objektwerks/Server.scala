@@ -8,6 +8,9 @@ import io.helidon.webserver.http.HttpRouting
 
 import java.time.Instant
 
+/**
+  * WebServer appears to set port incorrectly, always returning -1.
+  */
 object Server extends LazyLogging:
   @main def runServer(): Unit =
     val config = Config.create()
