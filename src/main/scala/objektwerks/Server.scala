@@ -26,6 +26,7 @@ object Server extends LazyLogging:
       .routing(routing)
       .build()
 
+    logger.info(s"*** Helidon WebServer port: ${server.port()}")
     logger.info(s"*** Server running @ $host:$port")
 
     sys.addShutdownHook {
