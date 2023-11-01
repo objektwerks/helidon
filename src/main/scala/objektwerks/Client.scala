@@ -5,20 +5,20 @@ import com.typesafe.scalalogging.LazyLogging
 import io.helidon.webclient.api.WebClient
 
 object Client extends LazyLogging:
-  @main def runClient(): Unit =
+  @main def runClient: Unit =
     val baseUrl = "http://localhost:7979"
     val endpoint = "/now"
 
     val client = WebClient
-      .builder()
+      .builder
       .baseUri(baseUrl)
-      .build()
+      .build
 
     val response = client
-      .get()
+      .get
       .path(endpoint)
-      .request()
-    val now = response.entity()
+      .request
+    val now = response.entity
 
     logger.info(s"*** Client targeting: $baseUrl$endpoint")
     logger.info(s"*** Server response: ${now.toString}")
