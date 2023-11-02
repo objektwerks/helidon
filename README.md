@@ -25,4 +25,4 @@ Curl
 
 Reference
 ---------
-1. [Helidon SE](https://helidon.io/docs/v4/#/se/introduction)
+* [Helidon SE](https://helidon.io/docs/v4/#/se/introduction)
