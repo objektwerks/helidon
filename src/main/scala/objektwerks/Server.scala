@@ -8,7 +8,7 @@ import java.time.Instant
 
 object Server:
   @main def runServer: Unit =
-    val config = Config.create
+    val config = Config.create.get("server")
 
     val routing = HttpRouting
       .builder
@@ -16,7 +16,7 @@ object Server:
 
     WebServer
       .builder
-      .config(config.get("server"))
+      .config(config)
       .routing(routing)
       .build
       .start
