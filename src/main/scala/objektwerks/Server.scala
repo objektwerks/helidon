@@ -1,15 +1,12 @@
 package objektwerks
 
-import com.typesafe.scalalogging.LazyLogging
-
 import io.helidon.config.Config
 import io.helidon.webserver.WebServer
 import io.helidon.webserver.http.HttpRouting
 
-import java.net.InetAddress
 import java.time.Instant
 
-object Server extends LazyLogging:
+object Server:
   @main def runServer: Unit =
     val config = Config.create
 
@@ -24,11 +21,8 @@ object Server extends LazyLogging:
       .build
       .start
 
-    logger.info(s"*** Server started @ ${InetAddress.getLocalHost}:${server.port}")
-
     sys.addShutdownHook {
       server.stop
-      logger.info("*** Server stopped.")
     }
 
     Thread.currentThread.join
