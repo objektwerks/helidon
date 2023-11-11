@@ -8,7 +8,6 @@ libraryDependencies ++= {
     "io.helidon.webserver" % "helidon-webserver" % helidonVersion,
     "io.helidon.webclient" % "helidon-webclient" % helidonVersion,
     "io.helidon.config" % "helidon-config-yaml" % "4.0.0",
-    "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5",
     "ch.qos.logback" % "logback-classic" % "1.4.11"
   )
 }
