@@ -6,6 +6,8 @@ import io.helidon.webserver.http.HttpRouting
 
 import java.time.Instant
 
+import scala.sys.process.Process
+
 object Server:
   @main def runServer: Unit =
     val config = Config.create.get("server")
@@ -20,5 +22,7 @@ object Server:
       .routing(routing)
       .build
       .start
+
+    Process("curl -v http://localhost:7979/now").run.exitValue
 
     Thread.currentThread.join
