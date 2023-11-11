@@ -14,7 +14,7 @@ object Server:
 
     val routing = HttpRouting
       .builder
-      .get("/now", (request, response) => response.send(Instant.now.toString))
+      .get("/now", (request, response) => response.send(s"*** Datetime: ${Instant.now.toString})"))
 
     WebServer
       .builder
