@@ -10,6 +10,9 @@ import java.time.Instant
 
 /**
   * WebServer appears to set port incorrectly, always returning -1.
+  * Javadoc for WebServer.port():
+  * Returns a port number the default server socket is bound to and is
+  * listening on; or -1 if unknown or not active.
   */
 object Server extends LazyLogging:
   @main def runServer: Unit =
