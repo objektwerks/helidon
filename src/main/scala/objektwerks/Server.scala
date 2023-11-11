@@ -11,7 +11,7 @@ import scala.sys.process.Process
 object Server:
   @main def runServer: Unit =
     val config = Config.create.get("server")
-    val url = config.get("url").asString
+    val url = config.get("url").asString.get
 
     val routing = HttpRouting
       .builder
