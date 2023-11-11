@@ -12,11 +12,11 @@ object Client:
       .builder
       .baseUri(url)
       .build
-    println(s"*** Client get: $url")
 
     val now = client
       .get
       .request
       .entity
       .as(classOf[String])
+    println(s"*** Client get: $url")
     println(s"$now")
