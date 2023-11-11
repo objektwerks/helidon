@@ -14,15 +14,11 @@ object Server:
       .builder
       .get("/now", (request, response) => response.send(Instant.now.toString))
 
-    val server = WebServer
+    WebServer
       .builder
       .config(config.get("server"))
       .routing(routing)
       .build
       .start
-
-    sys.addShutdownHook {
-      server.stop
-    }
 
     Thread.currentThread.join
