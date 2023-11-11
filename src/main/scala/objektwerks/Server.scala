@@ -31,6 +31,7 @@ object Server extends LazyLogging:
       .port(port)
       .routing(routing)
       .build
+      .start
 
     logger.info(s"*** Helidon WebServer port: ${server.port}")
     logger.info(s"*** Server running @ $host:$port")
