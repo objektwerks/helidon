@@ -12,10 +12,11 @@ object Server:
   @main def runServer: Unit =
     val config = Config.create.get("server")
     val url = config.get("url").asString.get
+    val endpoint = config.get("endpoint").asString.get
 
     val routing = HttpRouting
       .builder
-      .get("/now", (request, response) => response.send(s"*** Datetime: ${Instant.now.toString})"))
+      .get(endpoint, (request, response) => response.send(s"*** Datetime: ${Instant.now.toString})"))
 
     WebServer
       .builder
