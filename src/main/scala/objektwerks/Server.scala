@@ -6,14 +6,12 @@ import io.helidon.config.Config
 import io.helidon.webserver.WebServer
 import io.helidon.webserver.http.HttpRouting
 
+import java.net.InetAddress
 import java.time.Instant
 
 object Server extends LazyLogging:
   @main def runServer: Unit =
     val config = Config.create
-    val host = config.get("server.host").asString.get
-    val port = config.get("server.port").asInt.get
-    logger.info(s"*** Config host: $host port: $port")
 
     val routing = HttpRouting
       .builder
@@ -21,17 +19,15 @@ object Server extends LazyLogging:
 
     val server = WebServer
       .builder
-      .host(host)
-      .port(port)
+      .config(config.get("server"))
       .routing(routing)
       .build
       .start
 
-    logger.info(s"*** Helidon WebServer port: ${server.port}")
-    logger.info(s"*** Server running @ $host:$port")
+    logger.info(s"*** Server started @ ${InetAddress.getLocalHost}:${server.port}")
 
     sys.addShutdownHook {
-      logger.info(s"*** Server stopping @ $host:$port")
+      logger.info(s"*** Server stopped @ ${InetAddress.getLocalHost}:${server.port}")
       server.stop
     }
 
