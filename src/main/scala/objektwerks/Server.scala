@@ -11,6 +11,7 @@ import scala.sys.process.Process
 object Server:
   @main def runServer: Unit =
     val config = Config.create.get("server")
+    val url = config.get("url").asString
 
     val routing = HttpRouting
       .builder
@@ -23,6 +24,6 @@ object Server:
       .build
       .start
 
-    Process("curl -v http://localhost:7979/now").run.exitValue
+    Process(s"curl $url").run.exitValue
 
     Thread.currentThread.join
