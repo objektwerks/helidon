@@ -1,16 +1,18 @@
 package objektwerks
 
+import io.helidon.config.Config
 import io.helidon.webclient.api.WebClient
 
 object Client:
   @main def runClient: Unit =
-    val baseUrl = "http://localhost:7979/now"
+    val config = Config.create.get("server")
+    val url = config.get("url").asString.get
 
     val client = WebClient
       .builder
-      .baseUri(baseUrl)
+      .baseUri(url)
       .build
-    println(s"*** Client get: $baseUrl")
+    println(s"*** Client get: $url")
 
     val now = client
       .get
