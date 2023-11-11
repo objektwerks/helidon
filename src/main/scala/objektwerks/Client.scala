@@ -1,10 +1,8 @@
 package objektwerks
 
-import com.typesafe.scalalogging.LazyLogging
-
 import io.helidon.webclient.api.WebClient
 
-object Client extends LazyLogging:
+object Client:
   @main def runClient: Unit =
     val baseUrl = "http://localhost:7979/now"
 
@@ -12,12 +10,11 @@ object Client extends LazyLogging:
       .builder
       .baseUri(baseUrl)
       .build
-    
-    logger.info(s"*** Client get: $baseUrl")
+    println(s"*** Client get: $baseUrl")
 
-    val response = client
+    val now = client
       .get
       .request
-    val now = response.entity.as(classOf[String])
-
-    logger.info(s"*** Server response: ${now.toString}")
+      .entity
+      .as(classOf[String])
+    println(s"*** Server response: $now")
