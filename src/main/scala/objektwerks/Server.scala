@@ -27,8 +27,8 @@ object Server extends LazyLogging:
     logger.info(s"*** Server started @ ${InetAddress.getLocalHost}:${server.port}")
 
     sys.addShutdownHook {
-      logger.info(s"*** Server stopped @ ${InetAddress.getLocalHost}:${server.port}")
       server.stop
+      logger.info("*** Server stopped.")
     }
 
     Thread.currentThread.join
