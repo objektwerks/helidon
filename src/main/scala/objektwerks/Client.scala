@@ -19,4 +19,4 @@ object Client:
       .request
       .entity
       .as(classOf[String])
-    println(s"*** Server response: $now")
+    println(s"$now")
