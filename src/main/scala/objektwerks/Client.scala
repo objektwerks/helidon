@@ -13,7 +13,7 @@ object Client extends LazyLogging:
       .baseUri(baseUrl)
       .build
     
-    logger.info(s"*** Client targeting: $baseUrl")
+    logger.info(s"*** Client get: $baseUrl")
 
     val response = client
       .get
