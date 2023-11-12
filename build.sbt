@@ -1,6 +1,6 @@
 name := "helidon"
 organization := "objektwerks"
-version := "0.1-SNAPSHOT"
+version := "0.1"
 scalaVersion := "3.3.1"
 libraryDependencies ++= {
   val helidonVersion = "4.0.0"
