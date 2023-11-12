@@ -4,7 +4,7 @@ import io.helidon.config.Config
 import io.helidon.webclient.api.WebClient
 
 object NowClient:
-  @main def runClient: Unit =
+  @main def runNowClient: Unit =
     val config = Config.create.get("server")
     val url = config.get("url").asString.get
 
