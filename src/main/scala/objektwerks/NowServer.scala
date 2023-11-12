@@ -6,8 +6,8 @@ import io.helidon.webserver.http.{Handler, HttpRouting}
 
 import scala.sys.process.Process
   
-object Server:
-  @main def runServer: Unit =
+object NowServer:
+  @main def runNowServer: Unit =
     val config = Config.create.get("server")
     val url = config.get("url").asString.get
     val endpoint = config.get("endpoint").asString.get
