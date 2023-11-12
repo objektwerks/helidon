@@ -14,5 +14,6 @@ object NowClient:
       .request
       .entity
       .as(classOf[String])
+
     println(s"*** Now Client get: ${Conf.url}")
     println(s"$now")
