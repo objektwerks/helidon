@@ -1,16 +1,12 @@
 package objektwerks
 
-import io.helidon.config.Config
 import io.helidon.webclient.api.WebClient
 
 object NowClient:
   @main def runNowClient: Unit =
-    val config = Config.create.get("server")
-    val url = config.get("url").asString.get
-
     val client = WebClient
       .builder
-      .baseUri(url)
+      .baseUri(Conf.url)
       .build
 
     val now = client
@@ -18,5 +14,5 @@ object NowClient:
       .request
       .entity
       .as(classOf[String])
-    println(s"*** Now Client get: $url")
+    println(s"*** Now Client get: ${Conf.url}")
     println(s"$now")
