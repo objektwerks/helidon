@@ -7,8 +7,8 @@ Run
 1. sbt clean compile run
 ```
 Multiple main classes detected. Select one to run:
- [1] objektwerks.runClient
- [2] objektwerks.runServer
+ [1] objektwerks.runNowClient
+ [2] objektwerks.runNowServer
 
 Enter number:
 ```
