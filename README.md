@@ -39,3 +39,5 @@ Execute
 Reference
 ---------
 * [Helidon SE](https://helidon.io/docs/v4/#/se/introduction)
+* [GraalVM](https://www.graalvm.org/docs/introduction/)
+* [Sbt Packager](https://www.scala-sbt.org/sbt-native-packager/formats/graalvm-native-image.html)
