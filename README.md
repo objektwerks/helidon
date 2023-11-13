@@ -22,6 +22,7 @@ Curl
 
 Package
 -------
+>Takes around 60 seconds.
 1. sbt 'show graalvm-native-image:packageBin'
 
 Execute
