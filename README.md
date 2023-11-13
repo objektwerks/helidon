@@ -27,6 +27,10 @@ Curl
 ----
 1. curl -v http://localhost:7979/now
 
+Package
+-------
+1. sbt 'show graalvm-native-image:packageBin'
+
 Reference
 ---------
 * [Helidon SE](https://helidon.io/docs/v4/#/se/introduction)
