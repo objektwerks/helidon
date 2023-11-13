@@ -26,7 +26,7 @@ Package
 
 Execute
 -------
-1. ./target/graalvm-native-image/scala.graalvm
+1. ./target/graalvm-native-image/helidon
 2. curl -v http://localhost:7979/now
 
 Reference
