@@ -22,7 +22,7 @@ Curl
 
 Package
 -------
->Takes around 60 seconds.
+>Takes around 60 seconds. **Note:** Only 1 main class allowed in project.
 1. sbt 'show graalvm-native-image:packageBin'
 
 Execute
