@@ -21,4 +21,6 @@ import scala.sys.process.Process
 
   Process(s"curl ${Conf.url}").run.exitValue
 
+  
+
   Thread.currentThread.join
