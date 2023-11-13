@@ -2,8 +2,6 @@ package objektwerks
 
 import io.helidon.webserver.WebServer
 import io.helidon.webserver.http.{Handler, HttpRouting}
-
-import scala.sys.process.Process
   
 @main def runNowServer: Unit =
   val handler = NowHandler()
@@ -19,8 +17,6 @@ import scala.sys.process.Process
     .build
     .start
 
-  Process(s"curl ${Conf.url}").run.exitValue
-
-  println(NowClient.call())
+  println( NowClient.call() )
 
   Thread.currentThread.join
