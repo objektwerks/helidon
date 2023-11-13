@@ -2,7 +2,7 @@ enablePlugins(GraalVMNativeImagePlugin)
 
 name := "helidon"
 organization := "objektwerks"
-version := "0.3"
+version := "0.4-SNAPSHOT"
 scalaVersion := "3.3.1"
 libraryDependencies ++= {
   val helidonVersion = "4.0.0"
