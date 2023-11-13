@@ -2,7 +2,7 @@ package objektwerks
 
 import io.helidon.webclient.api.WebClient
 
-final class Client:
+final class NowClient:
   def call: String =
     val client = WebClient
       .builder
