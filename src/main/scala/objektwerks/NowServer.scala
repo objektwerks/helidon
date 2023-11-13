@@ -21,6 +21,7 @@ import scala.sys.process.Process
 
   Process(s"curl ${Conf.url}").run.exitValue
 
-  
+  val now = NowClient.call()
+  println(s"$now")
 
   Thread.currentThread.join
