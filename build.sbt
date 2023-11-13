@@ -1,3 +1,5 @@
+enablePlugins(GraalVMNativeImagePlugin)
+
 name := "helidon"
 organization := "objektwerks"
 version := "0.3-SNAPSHOT"
