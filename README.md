@@ -36,13 +36,13 @@ Docker
 2. sbt docker:stage  ( see target/docker/stage/Dockerfile )
 3. sbt docker:publishLocal
 4. docker images  ( note helidon-server:0.4 listed )
-5. docker run --rm -it -d -p 7979:7979/tcp helidon-server:0.1
-6. docker ps  ( note helidon-server:0.1 listed )
+5. docker run --rm -it -d -p 7979:7979/tcp helidon-server:0.4
+6. docker ps  ( note helidon-server:0.4 listed )
 7. docker exec -it container-id /bin/bash
    * curl http://localhost:7979/now  ( via docker container )
 8. curl http://localhost:7979/now ( via localhost )
 9. docker stop container-id  ( obtain container-id via docker ps listing )
-10. docker ps  ( note helidon-server:0.1 not listed )
+10. docker ps  ( note helidon-server:0.4 not listed )
 
 Docker Commands
 ---------------
