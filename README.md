@@ -51,12 +51,12 @@ Docker Commands
 * list containers - docker ps
 * logs - docker logs container-id
 
-Docker Push
------------
->To push an image to DockerHub, consider one of these options:
-1. Docker Dashboard
-2. Microsoft VSCode Docker
-3. sbt -Ddocker.username=user-name -Ddocker.registry=registry-url docker:publish
+Docker Publish
+--------------
+>To publish / push a docker image to DockerHub, consider one of these options:
+* Docker Dashboard
+* Microsoft VSCode Docker
+* sbt -Ddocker.username=user-name -Ddocker.registry=registry-url docker:publish
 
 Reference
 ---------
