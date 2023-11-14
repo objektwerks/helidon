@@ -1,5 +1,10 @@
 enablePlugins(DockerPlugin, GraalVMNativeImagePlugin)
 
+val dockerAppName = "now"
+val dockerImageName = "helidon-server"
+val dockerHubName = "objektwerks"
+val dockerAppVersion = "0.1"
+
 name := "helidon"
 organization := "objektwerks"
 version := "0.5-SNAPSHOT"
