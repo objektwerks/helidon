@@ -30,6 +30,34 @@ Execute GraalVM
 1. ./target/graalvm-native-image/helidon
 2. curl -v http://localhost:7979/now
 
+Docker
+------
+1. sbt clean compile stage
+2. sbt docker:stage  ( see target/docker/stage/Dockerfile )
+3. sbt docker:publishLocal
+4. docker images  ( note akka-http-server:0.1 listed )
+5. docker run --rm -it -d -p 7979:7979/tcp akka-http-server:0.1
+6. docker ps  ( note akka-http-server:0.1 listed )
+7. docker exec -it container-id /bin/bash
+   * curl http://localhost:7979/now  ( via docker container )
+8. curl http://localhost:7979/now ( via localhost )
+9. docker stop container-id  ( obtain container-id via docker ps listing )
+10. docker ps  ( note akka-http-server:0.1 not listed )
+
+Docker Commands
+---------------
+1. list images - docker images
+2. remove image - docker image rm image-id --force
+3. list containers - docker ps
+4. logs - docker logs container-id
+
+Docker Push
+-----------
+>To push an image to DockerHub, consider one of these options:
+1. Docker Dashboard
+2. Microsoft VSCode Docker
+3. sbt -Ddocker.username=user-name -Ddocker.registry=registry-url docker:publish
+
 Reference
 ---------
 * [Helidon SE](https://helidon.io/docs/v4/#/se/introduction)
