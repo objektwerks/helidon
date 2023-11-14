@@ -21,3 +21,16 @@ libraryDependencies ++= {
 scalacOptions ++= Seq(
   "-Wunused:all"
 )
+
+import com.typesafe.sbt.packager.docker._
+import com.typesafe.sbt.packager.docker.DockerChmodType
+
+Docker / packageName := dockerImageName
+dockerExposedPorts ++= Seq(7979)
+dockerBaseImage := "zulu-openjdk-alpine:21"
+dockerCommands ++= Seq(
+  Cmd("USER", "root"),
+  ExecCmd("RUN", "apk", "add", "--no-cache", "bash"),
+  ExecCmd("RUN", "apk", "add", "--no-cache", "curl")
+)
+dockerChmodType := DockerChmodType.UserGroupWriteExecute
