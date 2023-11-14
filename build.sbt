@@ -1,4 +1,4 @@
-enablePlugins(GraalVMNativeImagePlugin)
+enablePlugins(DockerPlugin, GraalVMNativeImagePlugin)
 
 name := "helidon"
 organization := "objektwerks"
