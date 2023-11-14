@@ -46,10 +46,10 @@ Docker
 
 Docker Commands
 ---------------
-1. list images - docker images
-2. remove image - docker image rm image-id --force
-3. list containers - docker ps
-4. logs - docker logs container-id
+* list images - docker images
+* remove image - docker image rm image-id --force
+* list containers - docker ps
+* logs - docker logs container-id
 
 Docker Push
 -----------
