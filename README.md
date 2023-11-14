@@ -1,6 +1,6 @@
 Helidon
 -------
->Helidon feature tests using Scala 3.
+>Helidon feature tests using GraalVM, Docker and Scala 3.
 
 Install
 -------
