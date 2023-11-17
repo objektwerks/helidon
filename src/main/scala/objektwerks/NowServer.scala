@@ -8,7 +8,7 @@ import io.helidon.webserver.http.{Handler, HttpRouting}
 
   val builder = HttpRouting
     .builder
-    .get(Conf.endpoint, handler)
+    .get(handler.endpoint, handler)
 
   WebServer
     .builder
