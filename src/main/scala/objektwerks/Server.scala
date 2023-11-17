@@ -3,7 +3,7 @@ package objektwerks
 import io.helidon.webserver.WebServer
 import io.helidon.webserver.http.{Handler, HttpRouting}
   
-@main def runNowServer: Unit =
+@main def runServer: Unit =
   val handler = NowHandler()
 
   val builder = HttpRouting

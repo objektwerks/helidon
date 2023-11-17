@@ -1,6 +1,6 @@
 Helidon
 -------
->Helidon feature tests using Docker, JDK 21 GraalVM and Scala 3.
+>Helidon feature app using Docker, JDK 21 GraalVM and Scala 3.
 
 Install
 -------
