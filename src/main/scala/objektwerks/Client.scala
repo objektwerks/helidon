@@ -2,7 +2,7 @@ package objektwerks
 
 import io.helidon.webclient.api.WebClient
 
-object NowClient:
+object Client:
   def get(url: String): String =
     WebClient
       .builder
