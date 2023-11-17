@@ -2,7 +2,7 @@ package objektwerks
 
 import io.helidon.config.Config
 
-object NowConf:
+object NowConfig:
   val config = Config.create.get("now")
   val endpoint = config.get("endpoint").asString.get
   val port = config.get("port").asInt.get
