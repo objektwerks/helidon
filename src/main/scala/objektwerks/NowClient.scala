@@ -3,7 +3,7 @@ package objektwerks
 import io.helidon.webclient.api.WebClient
 
 object NowClient:
-  def call(url: String): String =
+  def get(url: String): String =
     WebClient
       .builder
       .baseUri(url)
