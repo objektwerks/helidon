@@ -4,11 +4,9 @@ import io.helidon.webserver.WebServer
 import io.helidon.webserver.http.{Handler, HttpRouting}
   
 @main def runServer: Unit =
-  val nowHandler = NowHandler()
-
   val router = HttpRouting
     .builder
-    .get(NowConfig.endpoint, nowHandler)
+    .get(NowConfig.endpoint, NowHandler())
 
   WebServer
     .builder
