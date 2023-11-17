@@ -3,10 +3,10 @@ package objektwerks
 import io.helidon.webclient.api.WebClient
 
 object NowClient:
-  def call(): String =
+  def call(url: String): String =
     WebClient
       .builder
-      .baseUri(Conf.url)
+      .baseUri(url)
       .build
       .get
       .request
