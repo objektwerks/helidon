@@ -12,11 +12,11 @@ import io.helidon.webserver.http.{Handler, HttpRouting}
 
   WebServer
     .builder
-    .config(Conf.config)
+    .config(NowConf.config)
     .routing(builder)
     .build
     .start
 
-  println( NowClient.get(Conf.url) )
+  println( NowClient.get( NowConf.url ) )
 
   Thread.currentThread.join
