@@ -12,7 +12,7 @@ import io.helidon.webserver.http.{Handler, HttpRouting}
 
   WebServer
     .builder
-    .config(NowConf.config)
+    .port( NowConf.port )
     .routing(builder)
     .build
     .start
