@@ -11,7 +11,7 @@ final class CommandHandler() extends Handler:
     val command = readFromString[Command](commandJson)
     println(s"*** Command: $command")
 
-    val event = Event()
+    val event = Event("test")
     val eventJson = writeToString[Event](event)
     println(s"*** Event: $eventJson")
     response.send(eventJson)
