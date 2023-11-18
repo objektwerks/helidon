@@ -14,4 +14,7 @@ final class CommandHandler() extends Handler:
     val event = Event("test")
     val eventJson = writeToString[Event](event)
     println(s"*** Event: $eventJson")
-    response.send(eventJson)
+    response
+      .status(200)
+      .header("Content-Type", "application/json; charset=UTF-8")
+      .send(eventJson)
