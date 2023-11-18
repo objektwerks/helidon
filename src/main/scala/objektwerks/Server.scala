@@ -6,15 +6,15 @@ import io.helidon.webserver.http.{Handler, HttpRouting}
 @main def runServer: Unit =
   val router = HttpRouting
     .builder
-    .get(NowConfig.endpoint, NowHandler())
+    .get(Conf.nowEndpoint, NowHandler())
 
   WebServer
     .builder
-    .port(NowConfig.port)
+    .port(Conf.port)
     .routing(router)
     .build
     .start
 
-  println( Client.get(NowConfig.url) )
+  println( Client.get(Conf.nowUrl) )
 
   Thread.currentThread.join
