@@ -17,6 +17,8 @@ object Client:
 
   def post(command: Command, url: String): Event =
     val commandJson = writeToString[Command](command)
+    println(command)
+    println(commandJson)
 
     val eventJson = WebClient
       .builder

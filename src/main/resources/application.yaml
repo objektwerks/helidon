@@ -1,5 +1,5 @@
 server:
-    port: 7979
+  port: 7979
 now:
   endpoint: "/now"
   url: "http://127.0.0.1:7979/now"
