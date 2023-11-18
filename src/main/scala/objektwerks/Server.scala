@@ -7,6 +7,7 @@ import io.helidon.webserver.http.{Handler, HttpRouting}
   val router = HttpRouting
     .builder
     .get(Conf.nowEndpoint, NowHandler())
+    .post(Conf.commandEndpoint, CommandHandler())
 
   WebServer
     .builder
