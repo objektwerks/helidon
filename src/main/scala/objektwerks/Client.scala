@@ -25,8 +25,7 @@ object Client:
       .baseUri(url)
       .build
       .post
-      .request
+      .submit(commandJson, classOf[String])
       .entity
-      .as(classOf[String])
     
     readFromString[Event](eventJson)

@@ -1,8 +1,7 @@
 server:
   port: 7979
+  url: "http://127.0.0.1:7979"
 now:
   endpoint: "/now"
-  url: "http://127.0.0.1:7979/now"
 command:
   endpoint: "/command"
-  url: "http://127.0.0.1:7979/command"
