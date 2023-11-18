@@ -16,7 +16,7 @@ import io.helidon.webserver.http.{Handler, HttpRouting}
     .build
     .start
 
-  println( Client.get(Conf.nowUrl) )
-  println( Client.post(Command("test"), Conf.commandUrl) )
+  println( Client.get(Conf.url, Conf.nowEndpoint) )
+  println( Client.post(Command("test"), Conf.url, Conf.commandEndpoint) )
 
   Thread.currentThread.join
