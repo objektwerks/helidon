@@ -25,6 +25,8 @@ object Client:
     val eventJson = WebClient
       .builder
       .baseUri(url)
+      .addHeader("Content-Type", "application/json; charset=UTF-8")
+      .addHeader("Accept", "application/json")
       .build
       .post(endpoint)
       .submit(commandJson, classOf[String])
