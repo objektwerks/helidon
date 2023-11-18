@@ -9,3 +9,4 @@ final class CommandHandler() extends Handler:
                       response: ServerResponse): Unit =
     val json = request.content.as(classOf[String])
     val command = readFromString[Command](json)
+    println(s"*** Command: $command")
