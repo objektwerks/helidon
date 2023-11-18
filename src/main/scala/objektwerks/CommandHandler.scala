@@ -1,10 +1,11 @@
 package objektwerks
 
-import io.helidon.webserver.http.{Handler, ServerRequest, ServerResponse}
+import com.github.plokhotnyuk.jsoniter_scala.core.*
 
-import java.time.Instant
+import io.helidon.webserver.http.{Handler, ServerRequest, ServerResponse}
 
 final class CommandHandler() extends Handler:
   override def handle(request: ServerRequest,
                       response: ServerResponse): Unit =
-    response.send(s"*** Now: ${Instant.now.toString}")
+    val json = request.content.as(classOf[String])
+    val command = readFromString[Command](json)
