@@ -5,7 +5,8 @@ import com.github.plokhotnyuk.jsoniter_scala.core.*
 import io.helidon.webclient.api.WebClient
 
 object Client:
-  def get(url: String, endpoint: String): String =
+  def get(url: String,
+          endpoint: String): String =
     WebClient
       .builder
       .baseUri(url)
@@ -15,7 +16,9 @@ object Client:
       .entity
       .as(classOf[String])
 
-  def post(command: Command, url: String, endpoint: String): Event =
+  def post(command: Command,
+           url: String,
+           endpoint: String): Event =
     val commandJson = writeToString[Command](command)
 
     val eventJson = WebClient
