@@ -22,6 +22,9 @@ Run
 Curl
 ----
 1. curl -v http://localhost:7979/now
+2. curl -X POST http://localhost:7979/command
+        -H "Content-Type: application/json" 
+        -d "{name: "test"}"
 
 Package GraalVM
 ---------------
