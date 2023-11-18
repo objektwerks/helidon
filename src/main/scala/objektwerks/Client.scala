@@ -24,7 +24,7 @@ object Client:
       .builder
       .baseUri(url)
       .build
-      .post(commandJson)
+      .post
       .request
       .entity
       .as(classOf[String])
