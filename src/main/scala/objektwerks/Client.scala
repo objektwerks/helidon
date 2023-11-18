@@ -10,6 +10,7 @@ object Client:
     WebClient
       .builder
       .baseUri(url)
+      .addHeader("Accept", "text/html")
       .build
       .get(endpoint)
       .request
