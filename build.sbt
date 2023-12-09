@@ -18,7 +18,7 @@ libraryDependencies ++= {
     "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % jsoniterVersion,
     "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % jsoniterVersion % Provided,
     "io.helidon.config" % "helidon-config-yaml" % "4.0.0",
-    "ch.qos.logback" % "logback-classic" % "1.4.13"
+    "ch.qos.logback" % "logback-classic" % "1.4.14"
   )
 }
 scalacOptions ++= Seq(
