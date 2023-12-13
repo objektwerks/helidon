@@ -1,6 +1,6 @@
 Helidon
 -------
->Helidon app using Docker, JDK 21 GraalVM and Scala 3.
+>Helidon app using Docker, JDK 21 GraalVM, Jsoniter and Scala 3.
 
 Install
 -------
