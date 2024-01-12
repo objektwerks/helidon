@@ -17,7 +17,7 @@ Install
 
 Run
 ---
-1. sbt cleane run
+1. sbt clean run
 
 Curl
 ----
