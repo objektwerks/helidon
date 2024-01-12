@@ -7,6 +7,7 @@
             <pattern>%-5p: %d{ISO8601} [%t] %m%n</pattern>
         </encoder>
     </appender>
+    <logger name="io.helidon.webclient" level="DEBUG"/>
     <logger name="io.helidon.webserver" level="DEBUG"/>
     <root level="DEBUG">
         <appender-ref ref="file"/>
