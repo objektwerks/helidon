@@ -20,6 +20,7 @@ libraryDependencies ++= {
     "io.helidon.webserver.observe" % "helidon-webserver-observe-health" % helidonVersion,
     "io.helidon.health" % "helidon-health-checks" % helidonVersion,
     "io.helidon.webserver.observe" % "helidon-webserver-observe-info" % helidonVersion,
+    "io.helidon.webserver.observe" % "helidon-webserver-observe-log" % helidonVersion,
     "io.helidon.webserver.observe" % "helidon-webserver-observe-metrics" % helidonVersion,
     "io.helidon.metrics" % "helidon-metrics-system-meters" % helidonVersion,
     "io.helidon.openapi" % "helidon-openapi" % helidonVersion,
