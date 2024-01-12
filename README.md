@@ -24,6 +24,10 @@ Curl
 1. curl -v http://localhost:7979/now
 2. curl -X POST http://localhost:7979/command -H "Content-Type: application/json" -d '{"name":"run command"}'
 
+Metrics
+-------
+1. curl -s -H 'Accept: text/plain' -X GET http://localhost:7979/observe/metrics
+
 Package GraalVM
 ---------------
 >Takes around 60 seconds. **Note:** Only 1 main class is allowed in an sbt-native-packager project.
