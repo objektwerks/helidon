@@ -1,6 +1,7 @@
 package objektwerks
 
 import io.helidon.health.checks.HealthChecks
+import io.helidon.openapi.OpenApiFeature
 import io.helidon.webserver.observe.ObserveFeature
 import io.helidon.webserver.observe.health.HealthObserver
 import io.helidon.webserver.observe.metrics.MetricsObserver
@@ -25,3 +26,5 @@ object Features:
       .config(Conf.metrics)
       .addObserver(MetricsObserver.create())
       .build()
+
+  def openapi(): OpenApiFeature = OpenApiFeature.create(Conf.openapi)
