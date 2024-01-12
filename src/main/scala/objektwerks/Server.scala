@@ -1,7 +1,7 @@
 package objektwerks
 
 import io.helidon.webserver.WebServer
-import io.helidon.webserver.http.{Handler, HttpRouting}
+import io.helidon.webserver.http.{HttpRouting}
   
 @main def runServer: Unit =
   val router = HttpRouting
