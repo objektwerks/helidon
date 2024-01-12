@@ -3,6 +3,7 @@ package objektwerks
 import io.helidon.health.checks.HealthChecks
 import io.helidon.webserver.observe.ObserveFeature
 import io.helidon.webserver.observe.health.HealthObserver
+import io.helidon.webserver.observe.metrics.MetricsObserver
 
 object Features:
   def healthChecks(): ObserveFeature =
@@ -21,6 +22,6 @@ object Features:
   def metrics(): ObserveFeature =
     ObserveFeature
       .builder()
-      .config(config.get("server.features.observe"))
+      .config(Conf.metrics)
       .addObserver(MetricsObserver.create())
       .build()
