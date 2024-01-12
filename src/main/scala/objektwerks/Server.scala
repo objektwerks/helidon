@@ -1,8 +1,11 @@
 package objektwerks
 
+import io.helidon.logging.common.LogConfig
 import io.helidon.webserver.WebServer
   
 @main def runServer: Unit =
+  LogConfig.configureRuntime()
+  
   WebServer
     .builder
     .port(Conf.port)
