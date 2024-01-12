@@ -2,6 +2,11 @@ Helidon
 -------
 >Helidon app using Docker, JDK 21 GraalVM, Jsoniter and Scala 3.
 
+Features
+--------
+>Currently configured features:
+```[Config, Encoding, Health, Media, Metrics, Observe, OpenAPI, WebClient, WebServer]```
+
 Install
 -------
 >[GraalVM Getting Started](https://www.graalvm.org/docs/getting-started/)
