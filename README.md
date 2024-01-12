@@ -27,7 +27,7 @@ Curl
 Metrics
 -------
 1. curl -s -H 'Accept: text/plain' -X GET http://localhost:7979/observe/metrics
->**Warning:** The server throws this *warning*:
+>**Warning:** ```Server``` throws this *warning*:
 ```
 Unexpected discovery of unknown previously-created meter; creating wrapper for io.micrometer.core.instrument.composite.CompositeFunctionCounter
 ```
