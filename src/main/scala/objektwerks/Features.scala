@@ -1,8 +1,8 @@
 package objektwerks
 
+import io.helidon.health.checks.HealthChecks
 import io.helidon.webserver.observe.ObserveFeature
 import io.helidon.webserver.observe.health.HealthObserver
-import io.helidon.health.checks.HealthChecks
 
 object Features:
   def healthChecks() =
