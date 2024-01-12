@@ -17,3 +17,10 @@ object Features:
           .details(true)
           .build()
       )
+
+  def metrics(): ObserveFeature =
+    ObserveFeature
+      .builder()
+      .config(config.get("server.features.observe"))
+      .addObserver(MetricsObserver.create())
+      .build()
