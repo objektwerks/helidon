@@ -10,6 +10,7 @@ Features
 Issues
 ------
 1. Logging does not work correctly --- with Helidon messages going to console, not ./target/server.log.
+2. Metrics throws warnings. See Metrics section below.
 
 Install
 -------
