@@ -16,6 +16,7 @@ libraryDependencies ++= {
     "io.helidon.webserver" % "helidon-webserver" % helidonVersion,
     "io.helidon.webclient" % "helidon-webclient" % helidonVersion,
     "io.helidon.webserver" % "helidon-webserver-cors" % helidonVersion,
+    "io.helidon.webserver.observe" % "helidon-webserver-observe" % helidonVersion,
     "io.helidon.webserver.observe" % "helidon-webserver-observe-health" % helidonVersion,
     "io.helidon.health" % "helidon-health-checks" % helidonVersion,
     "io.helidon.webserver.observe" % "helidon-webserver-observe-metrics" % helidonVersion,
