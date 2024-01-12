@@ -19,6 +19,7 @@ libraryDependencies ++= {
     "io.helidon.webserver.observe" % "helidon-webserver-observe-health" % helidonVersion,
     "io.helidon.health" % "helidon-health-checks" % helidonVersion,
     "io.helidon.webserver.observe" % "helidon-webserver-observe-metrics" % helidonVersion,
+    "io.helidon.metrics" % "helidon-metrics-system-meters" % helidonVersion,
     "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % jsoniterVersion,
     "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % jsoniterVersion % Provided,
     "io.helidon.config" % "helidon-config-yaml" % helidonVersion,
