@@ -27,6 +27,11 @@ Curl
 Metrics
 -------
 1. curl -s -H 'Accept: text/plain' -X GET http://localhost:7979/observe/metrics
+>**Warning:** The server throws this *warning*:
+```
+Unexpected discovery of unknown previously-created meter; creating wrapper for io.micrometer.core.instrument.composite.CompositeFunctionCounter
+```
+>Yet the above curl command works correctly.
 
 Package GraalVM
 ---------------
