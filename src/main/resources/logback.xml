@@ -8,6 +8,7 @@
         </encoder>
     </appender>
     <logger name="io.helidon.cors" level="DEBUG"/>
+    <logger name="io.helidon.health.checks" level="DEBUG"/>
     <logger name="io.helidon.webclient" level="DEBUG"/>
     <logger name="io.helidon.webserver" level="DEBUG"/>
     <root level="DEBUG">
