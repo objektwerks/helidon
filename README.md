@@ -38,7 +38,7 @@ Unexpected discovery of unknown previously-created meter; creating wrapper for i
 ```
 >Yet the above curl command works correctly.
 
-Open API
+OpenAPI
 --------
 1. curl -X GET http://localhost:7979/openapi
 
