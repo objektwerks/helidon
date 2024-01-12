@@ -9,6 +9,7 @@ import io.helidon.webserver.WebServer
     .featuresDiscoverServices(false)
     .addFeature(Features.healthChecks())
     .addFeature(Features.metrics())
+    .addFeature(Features.openapi())
     .routing(Router.build())
     .build
     .start
