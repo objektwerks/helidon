@@ -27,6 +27,7 @@ libraryDependencies ++= {
     "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % jsoniterVersion,
     "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % jsoniterVersion % Provided,
     "io.helidon.config" % "helidon-config-yaml" % helidonVersion,
+    "io.helidon.logging" % "helidon-logging-slf4j" % helidonVersion,
     "ch.qos.logback" % "logback-classic" % "1.4.14"
   )
 }
