@@ -11,3 +11,5 @@ object Conf:
   val nowEndpoint = config.get("now").get("endpoint").asString.get
 
   val commandEndpoint = config.get("command").get("endpoint").asString.get
+
+  val metrics = config.get("server.features.observe")
