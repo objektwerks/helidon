@@ -7,6 +7,10 @@ Features
 >Currently configured features:
 ```[Config, Encoding, Health, Media, Metrics, Observe, OpenAPI, WebClient, WebServer]```
 
+Issues
+------
+1. Logging does not work correctly --- with Helidon messages going to console, not ./target/server.log.
+
 Install
 -------
 >[GraalVM Getting Started](https://www.graalvm.org/docs/getting-started/)
