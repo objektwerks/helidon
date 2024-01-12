@@ -13,6 +13,6 @@ object Conf:
 
   val commandEndpoint = config.get("command").get("endpoint").asString.get
 
-  val metrics = config.get("server.features.observe")
+  val metrics = Config.global().get("server.features.observe")
 
-  val openapi = config.get("openapi")
+  val openapi = Config.global().get("openapi")
