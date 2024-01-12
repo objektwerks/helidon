@@ -11,13 +11,15 @@ object Router:
     .get(Conf.nowEndpoint, cors(), NowHandler())
     .post(Conf.commandEndpoint, cors(), CommandHandler())
 
-  private def cors(): CorsSupport = CorsSupport.builder()  
-    .addCrossOrigin(
-      CrossOriginConfig
-        .builder() 
-        .allowOrigins("http://localhost")
-        .allowMethods("GET", "POST") 
-        .build()
-    ) 
-    .addCrossOrigin(CrossOriginConfig.create())
-    .build()
+  private def cors(): CorsSupport =
+    CorsSupport
+      .builder()  
+      .addCrossOrigin(
+        CrossOriginConfig
+          .builder() 
+          .allowOrigins("http://localhost")
+          .allowMethods("GET", "POST") 
+          .build()
+      ) 
+      .addCrossOrigin(CrossOriginConfig.create())
+      .build()
