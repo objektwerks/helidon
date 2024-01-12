@@ -3,3 +3,13 @@ info:
   version: 1.0.0
   title: Helidon API
   description: Scala 3 Helidon API
+servers:
+  - url: http://localhost:7979
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+security:
+  - BasicAuth: []
+paths: {}
