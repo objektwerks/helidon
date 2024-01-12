@@ -3,7 +3,7 @@ enablePlugins(DockerPlugin, GraalVMNativeImagePlugin)
 lazy val dockerAppName = "now"
 lazy val dockerImageName = "helidon-server"
 lazy val dockerHubName = "objektwerks"
-lazy val dockerAppVersion = "0.10"
+lazy val dockerAppVersion = "0.11"
 
 name := "helidon"
 organization := "objektwerks"
