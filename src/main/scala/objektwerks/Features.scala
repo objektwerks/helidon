@@ -5,7 +5,7 @@ import io.helidon.webserver.observe.ObserveFeature
 import io.helidon.webserver.observe.health.HealthObserver
 
 object Features:
-  def healthChecks() =
+  def healthChecks(): ObserveFeature =
     ObserveFeature
       .create(
         HealthObserver
