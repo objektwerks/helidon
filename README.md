@@ -38,6 +38,10 @@ Unexpected discovery of unknown previously-created meter; creating wrapper for i
 ```
 >Yet the above curl command works correctly.
 
+Open API
+--------
+1. curl -X GET http://localhost:7979/openapi
+
 Package GraalVM
 ---------------
 >Takes around 60 seconds. **Note:** Only 1 main class is allowed in an sbt-native-packager project.
