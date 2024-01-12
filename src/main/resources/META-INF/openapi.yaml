@@ -15,4 +15,7 @@ security:
 paths:
   /now:
     get:
-     description: Returns current datetime. 
+     description: Returns current datetime.
+  /command:
+    post:
+     description: Returns an event.
