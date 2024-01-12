@@ -12,4 +12,7 @@ components:
       scheme: basic
 security:
   - BasicAuth: []
-paths: {}
+paths:
+  /now:
+    get:
+     description: Returns current datetime. 
