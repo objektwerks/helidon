@@ -16,9 +16,11 @@ object Router:
       .builder()  
       .addCrossOrigin(
         CrossOriginConfig
-          .builder() 
+          .builder()
+          .allowCredentials(true)
+          .allowHeaders("*")
+          .allowMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
           .allowOrigins("http://localhost")
-          .allowMethods("GET", "POST") 
           .build()
       ) 
       .addCrossOrigin(CrossOriginConfig.create())
