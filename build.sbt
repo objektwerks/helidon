@@ -32,7 +32,7 @@ libraryDependencies ++= {
   )
 }
 scalacOptions ++= Seq(
-  "-Wunused:all"
+  "-Wall"
 )
 
 import com.typesafe.sbt.packager.docker._
