@@ -11,7 +11,7 @@ version := dockerAppVersion
 scalaVersion := "3.7.3-RC2"
 libraryDependencies ++= {
   val helidonVersion = "4.3.0-M1"
-  val jsoniterVersion = "2.37.7"
+  val jsoniterVersion = "2.37.8"
   Seq(
     "io.helidon.webserver" % "helidon-webserver" % helidonVersion,
     "io.helidon.webclient" % "helidon-webclient" % helidonVersion,
