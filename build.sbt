@@ -10,7 +10,7 @@ organization := "objektwerks"
 version := dockerAppVersion
 scalaVersion := "3.7.3"
 libraryDependencies ++= {
-  val helidonVersion = "4.3.0-M2"
+  val helidonVersion = "4.3.0-M3"
   val jsoniterVersion = "2.37.9"
   Seq(
     "io.helidon.webserver" % "helidon-webserver" % helidonVersion,
